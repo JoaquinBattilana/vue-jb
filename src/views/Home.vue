@@ -1,5 +1,5 @@
 <template lang="pug">
-  <register-form />
+  register-form
 </template>
 
 <script>
