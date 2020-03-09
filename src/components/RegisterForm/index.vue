@@ -1,18 +1,17 @@
 <template lang="pug">
-  form(class='asd')
+  form.search-form
     img(src='@/assets/image.png')
-    label First name
-    input(name='firstName' v-model='searchForm.firstName')
-    label Last name
-    input(name='lastName' v-model='searchForm.lastName')
-    label Email
-    input(name='email' v-model='searchForm.email' type='email')
-    label Password
-    input(name='password' v-model='searchForm.password' type='password')
+    label(for='searchFormFirstName') First name
+    input(name='firstName' v-model='searchForm.firstName' id='searchFormFirstName')
+    label(for='searchFormLastName') Last name
+    input(name='lastName' v-model='searchForm.lastName' id='searchFormLastName')
+    label(for='searchFormEmail') Email
+    input(name='email' v-model='searchForm.email' type='email' id='searchFormEmail')
+    label(for='searchFormPassword') Password
+    input(name='password' v-model='searchForm.password' type='password' id='searchFormPassword')
 </template>
 
 <script>
-
 export default {
   data () {
     return {
@@ -25,11 +24,10 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang='scss'>
-  .asd {
+  .search-form {
     display: flex;
     flex-direction: column;
   }
