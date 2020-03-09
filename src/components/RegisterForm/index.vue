@@ -1,6 +1,6 @@
 <template lang="pug">
   form.search-form
-    img(src='@/assets/image.png')
+    img.search-form-image(src='@/assets/image.png')
     label(for='searchFormFirstName') First name
     input(name='firstName' v-model='searchForm.firstName' id='searchFormFirstName')
     label(for='searchFormLastName') Last name
@@ -30,5 +30,9 @@ export default {
   .search-form {
     display: flex;
     flex-direction: column;
+
+    .search-form-image {
+      align-self: center;
+    }
   }
 </style>
