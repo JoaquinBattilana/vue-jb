@@ -17,7 +17,7 @@ export default {
 @import '@/scss/mixins.scss';
 
 .register-form-container {
-  margin: auto;
+  margin: 50px auto;
 }
 
 @include desktop {
