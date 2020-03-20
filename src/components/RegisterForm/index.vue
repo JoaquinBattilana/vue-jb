@@ -2,12 +2,9 @@
   form.search-form
     img.search-form-image(src='@/assets/image.png')
     register-form-input(name='searchFormFirstName' label='First name' v-model='searchForm.firstName')
-    label.search-form-label(for='searchFormLastName') Last name
-    input.search-form-input(name='lastName' v-model='searchForm.lastName' id='searchFormLastName')
-    label.search-form-label(for='searchFormEmail') Email
-    input.search-form-input(name='email' v-model='searchForm.email' type='email' id='searchFormEmail')
-    label.search-form-label(for='searchFormPassword') Password
-    input.search-form-input(name='password' v-model='searchForm.password' type='password' id='searchFormPassword')
+    register-form-input(name='searchFormLastName' label='Last name' v-model='searchForm.lastName')
+    register-form-input(name='searchFormEmail' label='Email' v-model='searchForm.email')
+    register-form-input(name='searchFormPassword' label='Password' v-model='searchForm.password' type='password')
     button(type='submit')
 </template>
 
