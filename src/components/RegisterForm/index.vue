@@ -6,6 +6,7 @@
     register-form-input(name='searchFormEmail' label='Email' v-model='searchForm.email')
     register-form-input(name='searchFormPassword' label='Password' v-model='searchForm.password' type='password')
     register-form-button(type='submit' text='Sign Up')
+    div.separator
     register-form-button(text='Login')
 </template>
 
@@ -38,15 +39,21 @@ export default {
 
 <style lang='scss'>
   .search-form {
+    background-color: #E6E6E6;
     display: flex;
     flex-direction: column;
-    align-items: center;
     max-width: 300px;
+    padding: 15px;
 
     .search-form-image {
-      align-self: center;
       max-width: 100%;
       margin-bottom: 30px;
+    }
+
+    .separator {
+      margin: 15px 0;
+      background-color: grey;
+      height: 1px;
     }
   }
 </style>
