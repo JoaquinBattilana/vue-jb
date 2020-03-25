@@ -1,6 +1,5 @@
 <template lang="pug">
-  main
-    router-view
+  router-view
 </template>
 
 <style lang='scss'>
