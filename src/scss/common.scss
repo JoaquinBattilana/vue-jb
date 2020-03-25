@@ -1,0 +1,69 @@
+@import './colors.scss';
+
+.primary-color {
+  background-color: $apple;
+  color: $white;
+}
+
+.secondary-color {
+  background-color: $white;
+  color: $apple;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.grey-separator {
+  background-color: $grey;
+  margin: 15px 0;
+  height: 1px;
+}
+
+.smooth-edges {
+  border: 0;
+  border-radius: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.max-full-width {
+  max-width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+$positions: 'right', 'left', 'top', 'bottom';
+
+@each $i in $positions {
+  @for $j from 1 through 5 {
+    .m-#{$i}-#{$j} {
+      margin-#{$i}: #{$j*5}px;
+    }
+  }
+}
+
+@each $i in $positions {
+  @for $j from 1 through 5 {
+    .p-#{$i}-#{$j} {
+      padding-#{$i}: #{$j*5}px;
+    }
+  }
+}
+
+@for $i from 1 through 5 {
+  .m-#{$i} {
+    margin: #{$i*5}px;
+  }
+}
+
+@for $i from 1 through 5 {
+  .p-#{$i} {
+    padding: #{$i*5}px;
+  }
+}

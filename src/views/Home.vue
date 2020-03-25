@@ -1,18 +1,29 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  .register-form-container
+    register-form
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import RegisterForm from '@/components/RegisterForm'
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    RegisterForm
   }
 }
 </script>
+
+<style lang='scss'>
+@import '@/scss/mixins.scss';
+
+.register-form-container {
+  margin: 50px auto;
+}
+
+@include desktop {
+
+  .register-form-container {
+    max-width: 300px;
+  }
+}
+</style>
