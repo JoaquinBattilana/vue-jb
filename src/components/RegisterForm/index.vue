@@ -8,7 +8,7 @@
     register-form-input(name='registerFormPasswordConfirmation' label='Password Confirmation' v-model='searchForm.passwordConfirmation' type='password')
     button.smooth-edges.form-button.primary-color(type='submit') Sign up
     .grey-separator
-    button.smooth-edges.form-button.secondary-color(type='button') Login
+    router-link.smooth-edges.form-button.secondary-color(tag='button' to='/login') Login
 </template>
 
 <script>
@@ -32,7 +32,11 @@ export default {
   },
   methods: {
     handleSubmit () {
-      UserService.registerUser(this.searchForm)
+      UserService.registerUser(this.searchForm).then(response => {
+        if (response.ok) {
+          this.$router.push('/login')
+        }
+      })
     }
   }
 }
