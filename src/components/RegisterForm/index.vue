@@ -40,7 +40,6 @@ export default {
 
   .search-form {
     background-color: $mercury;
-    max-width: 300px;
 
     .form-button {
       height: 40px;

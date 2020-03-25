@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.register-form-container
+  .register-form-container
     register-form
 </template>
 
@@ -23,7 +23,7 @@ export default {
 @include desktop {
 
   .register-form-container {
-    max-width: 500px;
+    max-width: 300px;
   }
 }
 </style>
