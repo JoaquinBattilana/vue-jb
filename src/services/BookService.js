@@ -6,5 +6,11 @@ export default {
       headers: {
         Autorization: window.localStorage.getItem('access_token')
       }
+    }),
+  getBookById: id =>
+    api.get(`books/${id}`, {}, {
+      headers: {
+        Autorization: window.localStorage.getItem('access_token')
+      }
     })
 }
