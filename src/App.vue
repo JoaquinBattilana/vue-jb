@@ -3,7 +3,6 @@
 </template>
 
 <script>
-
 import Home from '@/views/Home'
 
 export default {
@@ -11,5 +10,9 @@ export default {
     Home
   }
 }
-
 </script>
+
+<style lang='scss'>
+@import '@/scss/application';
+
+</style>

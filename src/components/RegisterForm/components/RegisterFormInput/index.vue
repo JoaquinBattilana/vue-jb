@@ -1,6 +1,6 @@
 <template lang="pug">
-  label.search-form-label {{label}}
-    input.search-form-input(:name='name' :value='value' @input='updateValue' :type='type')
+  label.search-form-label.full-width.m-bottom-2.relative {{label}}
+    input.search-form-input.full-width.m-top-1.relative(:name='name' :value='value' @input='updateValue' :type='type')
 </template>
 
 <script>
@@ -21,14 +21,12 @@ export default {
 
 <style lang='scss'>
   .search-form-label {
+    left: 5px;
     align-self: flex-start;
-    margin-bottom: 10px;
-    width: 100%;
-    position: relative;
 
     .search-form-input {
       height: 20px;
-      width: 100%;
+      right: 5px;
     }
   }
 </style>
