@@ -15,6 +15,11 @@
   flex-direction: column;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .grey-separator {
   background-color: $grey;
   margin: 15px 0;
