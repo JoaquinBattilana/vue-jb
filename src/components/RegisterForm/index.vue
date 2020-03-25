@@ -45,7 +45,7 @@ export default {
           }
         })
       } else {
-        console.log('Logeando')
+        UserService.login(this.searchForm)
       }
     }
   }
