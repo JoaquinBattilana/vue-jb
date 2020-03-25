@@ -8,7 +8,7 @@ export default {
       }
     }),
   getBookById: id =>
-    api.get(`books/${id}`, {
+    api.get(`books/${id}`, {}, {
       headers: {
         Autorization: window.localStorage.getItem('access_token')
       }

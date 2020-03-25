@@ -5,7 +5,7 @@ export default {
 
   state: {
     books: [],
-    currentBook: null
+    currentBook: {}
   },
 
   mutations: {

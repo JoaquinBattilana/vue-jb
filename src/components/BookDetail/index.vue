@@ -1,7 +1,7 @@
 <template lang="pug">
   .flex-row
     h2 {{currentBook.title}}
-    img {{currentBook.img}}
+    img(:src='currentBook.src')
     span {{currentBook.genre}}
     span {{currentBook.author}}
     span {{currentBook.publisher}}
@@ -14,16 +14,16 @@ import { mapState, mapActions } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      books: state => state.books.books
+      currentBook: state => state.books.currentBook
     })
   },
   methods: {
     ...mapActions({
-      getBooks: 'books/getBooks'
+      getBookById: 'books/getBookById'
     })
   },
   mounted () {
-    this.getBooks()
+    this.getBookById(this.$route.params.id)
   }
 }
 </script>
