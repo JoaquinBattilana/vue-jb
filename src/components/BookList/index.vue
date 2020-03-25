@@ -5,7 +5,7 @@
 
 <script>
 import Book from './Book'
-import BookService from '@/services/BookService'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -16,12 +16,18 @@ export default {
       books: []
     }
   },
-  mounted () {
-    BookService.getBooks().then(response => {
-      if (response.ok) {
-        this.books = response.data
-      }
+  computed: {
+    ...mapState({
+      books: state => state.books.books
     })
+  },
+  methods: {
+    ...mapActions({
+      getBooks: 'books/getBooks'
+    })
+  },
+  mounted () {
+    this.getBooks()
   }
 }
 </script>
