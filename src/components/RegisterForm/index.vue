@@ -56,7 +56,8 @@ export default {
         } else {
           UserService.login(this.searchForm).then(response => {
             if (response.ok) {
-              console.log(response.data.access_token)
+              window.localStorage.setItem('access_token', response.data.access_token)
+              this.$router.push('/')
             }
           })
         }

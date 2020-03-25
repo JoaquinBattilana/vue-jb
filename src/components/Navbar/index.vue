@@ -1,11 +1,17 @@
 <template lang="pug">
   nav.flex-row.full-width.navbar-container
     img.navbar-image(src='@/assets/image.png')
-    button.logout-button logout
+    button(@click='handleLogoutClick').logout-button logout
 </template>
 
 <script>
 export default {
+  methods: {
+    handleLogoutClick () {
+      window.localStorage.removeItem('access_token')
+      this.$router.push('/login')
+    }
+  }
 }
 </script>
 
