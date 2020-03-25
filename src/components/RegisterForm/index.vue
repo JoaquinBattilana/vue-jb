@@ -13,6 +13,7 @@
 
 <script>
 import RegisterFormInput from './components/RegisterFormInput'
+import UserService from '@/services/UserService'
 
 export default {
   components: {
@@ -31,7 +32,7 @@ export default {
   },
   methods: {
     handleSubmit () {
-      console.log(this.searchForm)
+      UserService.registerUser(this.searchForm)
     }
   }
 }
