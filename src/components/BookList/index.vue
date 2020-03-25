@@ -5,23 +5,24 @@
 
 <script>
 import Book from './Book'
-import BookService from '@/services/BookService'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   components: {
     Book
   },
-  data () {
-    return {
-      books: []
-    }
+  computed: {
+    ...mapState({
+      books: state => state.books.books
+    })
+  },
+  methods: {
+    ...mapActions({
+      getBooks: 'books/getBooks'
+    })
   },
   mounted () {
-    BookService.getBooks().then(response => {
-      if (response.ok) {
-        this.books = response.data
-      }
-    })
+    this.getBooks()
   }
 }
 </script>
