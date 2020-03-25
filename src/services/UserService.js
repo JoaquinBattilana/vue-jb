@@ -8,5 +8,9 @@ export default {
     first_name: firstName,
     last_name: lastName,
     locale: 'es'
+  }),
+  login: ({ email, password }) => api.post('/users/sessions', {
+    email,
+    password
   })
 }

@@ -1,6 +1,6 @@
 <template lang="pug">
   .register-form-container
-    register-form
+    register-form(register=true)
 </template>
 
 <script>
