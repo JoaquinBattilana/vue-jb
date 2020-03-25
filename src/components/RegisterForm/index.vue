@@ -45,7 +45,11 @@ export default {
           }
         })
       } else {
-        UserService.login(this.searchForm)
+        UserService.login(this.searchForm).then(response => {
+          if (response.ok) {
+            console.log(response.data.access_token)
+          }
+        })
       }
     }
   }
