@@ -11,11 +11,6 @@ export default {
   components: {
     Book
   },
-  data () {
-    return {
-      books: []
-    }
-  },
   computed: {
     ...mapState({
       books: state => state.books.books
